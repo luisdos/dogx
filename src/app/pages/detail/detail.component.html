@@ -1,0 +1,11 @@
+<main>
+    <header>
+        <a routerLink="/"><img src="../../../assets/back.svg" /> Go back</a>
+        <h1>{{breed | titlecase}}</h1>
+    </header>
+    <section *ngIf="subBreeds">
+        <div *ngFor="let sub of subBreeds | keyvalue">
+            <app-sub-breed-info [breedName]="sub.key" [imgSrc]="sub.value.message" />
+        </div>
+    </section>
+</main>

@@ -1,0 +1,26 @@
+[data-theme="light"] {
+    --header-bg-color: #5343ff;
+    --main-content-background-color: #D9D9D9;
+    --main-content-text-color: #000000;
+    --card-bg-color: #ffffff;
+    --card-hover-bg-color: #e2e2e2;
+    --card-sk-base-color: #f4f4f4;
+    --card-sk-shine-color: #ffffff;
+    --search-bar-bg-color: #ffffff;
+    --search-bar-placeholder-color: #D8D8D8;
+    --search-bar-text-color: #000000;
+    
+  }
+  
+  [data-theme="dark"] {
+    --header-bg-color: #373737;
+    --main-content-background-color: #222222;
+    --main-content-text-color: #ffffff;
+    --card-bg-color: #131313;
+    --card-hover-bg-color: #1f1f1f;
+    --card-sk-base-color: #131313;
+    --card-sk-shine-color: #303030;
+    --search-bar-bg-color: #515151;
+    --search-bar-placeholder-color: #D8D8D8;
+    --search-bar-text-color: #ffffff;
+  }

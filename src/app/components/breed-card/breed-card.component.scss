@@ -1,0 +1,45 @@
+$animation-duration: 1.6s;
+
+@mixin background-gradient {
+    background-image: linear-gradient(90deg, var(--card-sk-base-color) 0px, var(--card-sk-shine-color) 40px, var(--card-sk-base-color) 80px);
+    background-size: 600px;
+}
+
+.breed-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: var(--card-bg-color);
+    font-size: 18px;
+    margin: 45px 35px;
+    max-width: 250px;
+    min-width: 250px;
+    height: 150px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in 0s;
+
+    &:hover {
+        background-color: var(--card-hover-bg-color);
+    }
+}
+
+.skeleton {
+    @include background-gradient;
+    animation: shine-lines $animation-duration infinite linear; //skeleton-loading 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes shine-lines {
+    0% {
+        background-position: -100px
+    }
+
+    40% {
+        background-position: 140px
+    }
+
+    100% {
+        background-position: 200px
+    }
+}

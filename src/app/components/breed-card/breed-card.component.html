@@ -1,0 +1,7 @@
+<div *ngIf="state === stateType.Loading; else loaded">
+    <div class="breed-card skeleton"></div>
+</div>
+
+<ng-template #loaded>
+    <div class="breed-card" (click)="navigateToDetail()">{{ breedName | titlecase }}</div>
+</ng-template>

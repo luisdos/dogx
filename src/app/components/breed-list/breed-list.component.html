@@ -1,0 +1,19 @@
+<section *ngIf="listState === listStateType.Loading; else second" class="breed-list">
+    <app-breed-card [state]="listState"/>
+    <app-breed-card [state]="listState"/>
+    <app-breed-card [state]="listState"/>
+    <app-breed-card [state]="listState"/>
+</section>
+
+<ng-template #second>
+    <ng-container *ngIf="listState === listStateType.Success; else third">
+        <div class="search-container">
+            <input type="text" placeholder="Search..." (keypress)="onSearch($event)" />
+        </div>
+        <section class="breed-list">
+            <app-breed-card *ngFor="let breed of filteredBreeds | keyvalue" [breedName]="breed.key" [breedData]="breed" />
+        </section>
+    </ng-container>
+</ng-template>
+
+<ng-template #third>Error loading breeds</ng-template>
