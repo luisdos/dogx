@@ -1,2 +1,0 @@
-# dogx
-Dogs information app
