@@ -38,7 +38,5 @@ export class BreedListComponent {
     this.filteredBreeds = Object.keys(this.breeds)
       .filter((key) => key.includes(searchText))
       .reduce((cur, key) => { return Object.assign(cur, { [key]: this.breeds[key] })}, {});
-
-      console.log(this.filteredBreeds)
   }
 }
