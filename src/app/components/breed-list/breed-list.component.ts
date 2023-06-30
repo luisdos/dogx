@@ -30,7 +30,7 @@ export class BreedListComponent {
           this.listState = ListState.Error;
         }
       })
-    }, 3000);
+    }, 0);
   }
 
   onSearch(event: any) {

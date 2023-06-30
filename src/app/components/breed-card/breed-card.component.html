@@ -3,5 +3,8 @@
 </div>
 
 <ng-template #loaded>
-    <div class="breed-card" (click)="navigateToDetail()">{{ breedName | titlecase }}</div>
+    <div class="breed-card" (click)="navigateToDetail()">
+        <span class="b-name">{{ breedName | titlecase }}</span>
+        <span *ngIf="breedData.value.length > 0" class="b-sb-count">{{ breedData.value.length }} sub breeds</span>
+    </div>
 </ng-template>

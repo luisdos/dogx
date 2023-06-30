@@ -25,10 +25,10 @@ export class BreedsService {
   getBreedSubBreedData(breed: string): Observable<any> {
     return this.getBreedSubBreeds(breed).pipe(
       switchMap(breeds => {
-        let breedsData = breeds.message.reduce((a: any, v: string) => {
+        let breedsData = breeds.message.reduce((acc: any, currentValue: string) => {
           return { 
-            ...a, 
-            [v]: this.getBreedRandomImage(breed, v)
+            ...acc, 
+            [currentValue]: this.getBreedRandomImage(breed, currentValue)
           }
         }, {}) 
         return forkJoin(breedsData)

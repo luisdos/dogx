@@ -9,6 +9,7 @@ $animation-duration: 1.6s;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     border-radius: 5px;
     background-color: var(--card-bg-color);
     font-size: 18px;
@@ -23,11 +24,26 @@ $animation-duration: 1.6s;
     &:hover {
         background-color: var(--card-hover-bg-color);
     }
+
+    .b-name {
+        margin-top: auto;
+        margin-bottom: auto
+    }
+
+    .b-sb-count {
+        align-self: flex-end;
+        font-size: 10px;
+        margin: 5px;
+        padding: 5px;
+        color: #ffffff;
+        background-color: #5343ff;
+        border-radius: 5px;
+    }
 }
 
 .skeleton {
     @include background-gradient;
-    animation: shine-lines $animation-duration infinite linear; //skeleton-loading 0.5s ease-in-out infinite alternate;
+    animation: shine-lines $animation-duration infinite linear;
 }
 
 @keyframes shine-lines {
