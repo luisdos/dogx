@@ -1,5 +1,8 @@
 # Dogx
 
+You can see a [preview here](https://dogx.vercel.app/) deployed on Vercel.
+***
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
 ## Development server
