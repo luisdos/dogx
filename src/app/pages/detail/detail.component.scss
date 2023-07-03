@@ -1,3 +1,11 @@
+@media (max-width: 640px) {
+    main {
+        section {
+            justify-content: center !important;
+        }
+    }
+}
+
 main {
     display: flex;
     flex-direction: column;
