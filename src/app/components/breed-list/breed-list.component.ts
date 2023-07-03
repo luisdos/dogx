@@ -36,7 +36,7 @@ export class BreedListComponent {
   onSearch(event: any) {
     const searchText = event.target.value;
     this.filteredBreeds = Object.keys(this.breeds)
-      .filter((key) => key.includes(searchText))
+      .filter((key) => key.includes(String(searchText).toLowerCase()))
       .reduce((cur, key) => { return Object.assign(cur, { [key]: this.breeds[key] })}, {});
   }
 }
